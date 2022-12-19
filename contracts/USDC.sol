@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.6.12;
 
-import 'hardhat/console.sol';
-
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
         return msg.sender;
@@ -1388,7 +1386,7 @@ library EIP712 {
         assembly {
             chainId := chainid()
         }
-
+        
         return
             keccak256(
                 abi.encode(
@@ -1485,7 +1483,7 @@ abstract contract NativeMetaTransaction is EIP712Domain, Nonces {
             from: userAddress,
             functionSignature: functionSignature
         });
-
+        
         require(
             _verify(userAddress, metaTx, sigR, sigS, sigV),
             "Signer and signature do not match"
@@ -2514,12 +2512,10 @@ contract UChildAdministrableERC20 is
         override(Context, UChildERC20)
         returns (address payable sender)
     {
-        console.log("_msgSender called..");
         return ContextMixin.msgSender();
     }
 
     function mint(address _to, uint256 _amount) external {
-        console.log("minting..");
         _mint(_to, _amount);
     }
 
@@ -2759,4 +2755,10 @@ contract UChildAdministrableERC20 is
     ) external override whenNotPaused {
         _cancelAuthorization(authorizer, nonce, v, r, s);
     }
+
+    function getChainId() public view returns (uint256 chainId) {
+        assembly {
+            chainId := chainid()
+        }
+    } 
 }
