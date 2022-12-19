@@ -9,7 +9,7 @@ npx hardhat node --port 8448
 
 #### In terminal 2:
 ```
-npx hardhat deploy --network local
+npx hardhat deploy --network local --reset
 ```
 
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
