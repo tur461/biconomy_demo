@@ -1,0 +1,24 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Initializable",
+  "sourceName": "contracts/USDC.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "initialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60806040526000805460ff19169055348015601957600080fd5b50605d806100286000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063158ef93e14602d575b600080fd5b60336047565b604080519115158252519081900360200190f35b60005460ff169056fea164736f6c634300060c000a",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063158ef93e14602d575b600080fd5b60336047565b604080519115158252519081900360200190f35b60005460ff169056fea164736f6c634300060c000a",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
